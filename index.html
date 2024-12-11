@@ -3,7 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple E-Commerce Website</title>
+    <title>Handmade Gift Sale | Home decor items | Unique Handmade Gifts</title>
+	<meta name="description" content="Discover a wide range of unique handmade gifts crafted with love and quality materials. Perfect for any occasion.">
+    <meta name="keywords" content="handmade gifts, unique gifts, coconut shell crafts, wooden crafts, handmade decorations, e-commerce">
+    <meta name="author" content="Handmade Gift Sale">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#9328a7">
+
+    <!-- Open Graph (OG) Tags -->
+    <meta property="og:title" content="Handmade Gift Sale - Unique Handmade Products">
+    <meta property="og:description" content="Explore our range of handcrafted products made with care and precision. Find the perfect gift for your loved ones.">
+    <meta property="og:image" content="https://handmadegiftsale.in/images/og-image.jpg">
+    <meta property="og:url" content="https://handmadegiftsale.in">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Handmade Gift Sale - Unique Handmade Products">
+    <meta name="twitter:description" content="Explore our collection of handmade gifts and crafts. Unique, high-quality products perfect for gifting.">
+    <meta name="twitter:image" content="https://handmadegiftsale.in/images/twitter-image.jpg">
+    <!--meta name="twitter:site" content="@handmadegiftsale"-->
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://handmadegiftsale.in">
+
+    <!-- Preload Resources -->
+    <link rel="preload" href="images/backgrounds-1.jpg" as="image">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Handmade Gift Sale",
+      "url": "https://handmadegiftsale.in",
+      "logo": "https://handmadegiftsale.in/images/logo.png",
+      "description": "We offer handmade gifts crafted with love and quality materials. Explore our unique collection!",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8867499206",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,26 +66,62 @@
             background-color: #f4f4f4;
         }
         .header {
-            background: #c27cff;
+            position: relative;
+            height: 100vh;
+            background: url('images/backgrounds-1.jpg') no-repeat center center/cover;
             color: #fff;
-            padding: 10px;
             text-align: center;
-        }
-        .carousel {
             display: flex;
-            overflow: hidden;
-            background: #ddd;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .carousel img {
-            width: 100%;
-            max-height: 300px;
+        .header img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .header #icons-container img {
+            width: 80px;
+			height: auto;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin: 10px 0;
+        }
+		h3{
+			color: #9328a7;
+		}
+        .header p {
+            font-size: 1.5rem;
+        }
+        .animated-icon {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            animation: float 10s infinite linear;
+            pointer-events: none;
+        }
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(50px, -50px);
+            }
+            50% {
+                transform: translate(100px, 0);
+            }
+            75% {
+                transform: translate(50px, 50px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
         }
         .about, .contact {
             padding: 20px;
-            background: #fff;
             margin: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .products {
             display: flex;
@@ -53,7 +143,7 @@
             height: auto;
         }
         .product button {
-            background: #9328a7;
+            background: #ff00ba;
             color: #fff;
             border: none;
             padding: 10px 15px;
@@ -73,13 +163,13 @@
             font-size: 16px;
         }
         .footer {
-            background: #c27cff;
+            background: #ff00ba;
             color: #fdff00;
             text-align: center;
             padding: 10px;
         }
         .footer a {
-            color: #75028a;
+            color: #fff;
             margin: 0 5px;
             text-decoration: none;
         }
@@ -90,29 +180,39 @@
 </head>
 <body>
     <div class="header">
-		<img src="images/logo.png" alt="Handmadegiftsale.in">
+        <img src="images/logo.png" alt="Handmadegiftsale.in">
         <h1>Welcome to Handmade Gift Sale</h1>
         <p>WP: +91 88674 99206</p>
+        <div class="icons-container" id="icons-container">
+            <!-- Randomly floating PNG icons will be dynamically added here -->
+        </div>
     </div>
-
-    <div class="carousel">
-        <img src="https://via.placeholder.com/1200x300" alt="Carousel Image 1">
-        <img src="https://via.placeholder.com/1200x300" alt="Carousel Image 2">
-        <img src="https://via.placeholder.com/1200x300" alt="Carousel Image 3">
-    </div>
-
     <div class="about">
         <h2>About Us</h2>
-        <p>Welcome to our e-commerce platform! We provide a variety of quality products at affordable prices. Shop with confidence and enjoy a seamless shopping experience.</p>
+        <p>Welcome to the to the <a href="https://handmadegiftsale.in">handmade gift sale!</a> We’re excited that you want to learn more about us. We are a manufacturer handmade wooden crafts for sale. Our all-handmade products are 99% eco-friendly. We all welcome only eco-friendly products to decorate your home, office, and gifts.</p>
+		<h3>What Do We Do?</h3>
+		<p>We are manufacturers of handmade products for gifts, home appliances, home decorating, office table decor, and remember gifts. We are trying to make you live with love and peace with an environmentally friendly product.</p>
+
+		<h3>What type of products?</h3>
+		<p>We are manufacturers of home decor items like showpieces and beautiful handmade products for gifting to loved ones. We use wood, coconut shell, sea shell, bamboo, metal, leaves, lather, etc. manufacturer of handmade sculptures, home decor showpieces, key chains, key holders, pen stands, hair clips, jewelers, etc.</p>
+
+		<h3>Why are we not 100% environmentally friendly?</h3>
+		<p>We are trying to make it 100% eco-friendly, but without glue, shine, and wood safety components, it’s not possible. We are using 100% natural wood, shells, leathers, etc. to make all types of handmade products.</p>
+
+		<h3>Why choose us?</h3>
+		<p>Where you use our handmade products, you are saving the environment with natural products.<br>
+		We are giving 100% quality products to last a long time.<br>
+		We are making custom products based on your requests, like shape, color, dimensions, etc.<br>
+		We are not only selling our creative products. We can customize products for you. And your creative ideas are of 100% quality.</p>
     </div>
 
     <div class="filter-bar">
         <label for="price-filter">Filter by Price:</label>
         <select id="price-filter" onchange="filterProducts()">
             <option value="all">All</option>
-            <option value="low">Below $20</option>
-            <option value="medium">$20 - $50</option>
-            <option value="high">Above $50</option>
+            <option value="low">Below ₹200</option>
+            <option value="medium">₹201 - ₹500</option>
+            <option value="high">Above ₹500</option>
         </select>
     </div>
 
@@ -122,14 +222,20 @@
 
     <div class="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions or need support, feel free to reach out to us at +918867499206.</p>
+        <p>If you have any questions or need support, feel free to reach out to us at.</p>
+		<p>4-136 Nallan Gounder street,</p>
+		<p>Jaffrabath Post,</p>
+		<p>Pathapet,</p>
+		<p>Vaniyambadi -635754</p>
+		<p>Contact: +91 88674 99206</p>
+		<p>Email: support@handmadegiftsale.in</p>
     </div>
 
     <div class="footer">
         <p>&copy; 2024 handmadegiftsale.in | Follow us on: 
-            <a href="https://facebook.com" target="_blank">Facebook</a> | 
-            <a href="https://twitter.com" target="_blank">Twitter</a> | 
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com/Sivasankaran.Gift" target="_blank">Facebook</a> | 
+            <a href="https://www.instagram.com/ssksssiva" target="_blank">Instagram</a> | 
+            <a href="http://www.youtube.com/@sivasankaran2160" target="_blank">Youtube</a>
         </p>
     </div>
 
@@ -149,17 +255,17 @@
             { id: 11, name: 'Handmade Wooden Sunflower Pare With Coconut Shell And Wood', price: 250, image: 'images/products/Handmade-wooden-sunflower-pare-with-coconut-shell-and-wood.webp' },
             { id: 12, name: 'Handmade Wooden Sunflower With Coconut Shell And Wood', price: 300, image: 'images/products/Handmade-wooden-sunflower-with-coconut-shell-and-wood.webp' },
             { id: 13, name: 'Nice Coconut Shell Ship Under Coconut Tree', price: 350, image: 'images/products/Nice-coconut-shell-ship-under-coconut-tree.webp' },
-			{ id: 14, name: 'Nice Handmade Coconut Shell Boat Under Coconut Tree', price: 350, image: 'images/products/Nice-handmade-coconut-shell-boat-under-coconut-tree.webp' },
-			{ id: 15, name: 'Simple Handmade Wooden Pen Stand', price: 200, image: 'images/products/simple-handmade-wooden-pen-stand.webp' },
+            { id: 14, name: 'Nice Handmade Coconut Shell Boat Under Coconut Tree', price: 350, image: 'images/products/Nice-handmade-coconut-shell-boat-under-coconut-tree.webp' },
+            { id: 15, name: 'Simple Handmade Wooden Pen Stand', price: 200, image: 'images/products/simple-handmade-wooden-pen-stand.webp' },
         ];
 
         function loadProducts(filter = 'all') {
             const container = document.getElementById('product-container');
             container.innerHTML = '';
             const filteredProducts = products.filter(product => {
-                if (filter === 'low') return product.price < 20;
-                if (filter === 'medium') return product.price >= 20 && product.price <= 50;
-                if (filter === 'high') return product.price > 50;
+                if (filter === 'low') return product.price < 200;
+                if (filter === 'medium') return product.price >= 201 && product.price <= 500;
+                if (filter === 'high') return product.price > 500;
                 return true;
             });
 
@@ -183,13 +289,70 @@
 
         function sendMessage(productName, productPrice) {
             const phoneNumber = "918867499206"; // Replace with your WhatsApp number
-            const message = `Hi, I am interested in ${productName} priced at $${productPrice}.`;
+            const message = `Hi, I am interested in ${productName} priced at ₹${productPrice}.`;
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, "_blank");
         }
 
-        // Load all products on page load
-        window.onload = () => loadProducts();
+        function generateRandomIcons() {
+            const icons = [
+                'images/icons/icon1.png',
+                'images/icons/icon2.png',
+                'images/icons/icon3.png',
+                'images/icons/icon4.png',
+                'images/icons/icon5.png',
+                'images/icons/icon6.png',
+                'images/icons/icon7.png',
+                'images/icons/icon8.png',
+                'images/icons/icon9.png',
+                'images/icons/icon10.png',
+                'images/icons/icon11.png',
+                'images/icons/icon12.png',
+                'images/icons/icon13.png',
+                'images/icons/icon14.png',
+                'images/icons/icon15.png',
+                'images/icons/icon16.png',
+                'images/icons/icon17.png',
+                'images/icons/icon18.png',
+                'images/icons/icon19.png',
+                'images/icons/icon20.png',
+                'images/icons/icon21.png',
+                'images/icons/icon22.png'
+            ];
+
+            const selectedIcons = [];
+            while (selectedIcons.length < 3) {
+                const randomIndex = Math.floor(Math.random() * icons.length);
+                const selectedIcon = icons[randomIndex];
+                if (!selectedIcons.includes(selectedIcon)) {
+                    selectedIcons.push(selectedIcon);
+                }
+            }
+
+            const container = document.getElementById('icons-container');
+            container.innerHTML = '';
+
+            selectedIcons.forEach(icon => {
+                const randomTop = Math.random() * 80 + '%';
+                const randomLeft = Math.random() * 80 + '%';
+                const randomDuration = Math.random() * 5 + 5 + 's';
+
+                const img = document.createElement('img');
+                img.src = icon;
+                img.classList.add('animated-icon');
+                img.style.top = randomTop;
+                img.style.left = randomLeft;
+                img.style.animationDuration = randomDuration;
+
+                container.appendChild(img);
+            });
+        }
+
+        // Load all products and icons on page load
+        window.onload = () => {
+            loadProducts();
+            generateRandomIcons();
+        };
     </script>
 </body>
 </html>
