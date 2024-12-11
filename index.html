@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         .header {
-            background: #333;
+            background: #c27cff;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -53,7 +53,7 @@
             height: auto;
         }
         .product button {
-            background: #28a745;
+            background: #9328a7;
             color: #fff;
             border: none;
             padding: 10px 15px;
@@ -62,7 +62,7 @@
             margin-top: 10px;
         }
         .product button:hover {
-            background: #218838;
+            background: #037baf;
         }
         .filter-bar {
             margin: 20px;
@@ -73,13 +73,13 @@
             font-size: 16px;
         }
         .footer {
-            background: #333;
-            color: #fff;
+            background: #c27cff;
+            color: #fdff00;
             text-align: center;
             padding: 10px;
         }
         .footer a {
-            color: #4CAF50;
+            color: #75028a;
             margin: 0 5px;
             text-decoration: none;
         }
@@ -90,8 +90,9 @@
 </head>
 <body>
     <div class="header">
-        <h1>Simple E-Commerce</h1>
-        <p>Contact us at: +918867499206</p>
+		<img src="images/logo.png" alt="Handmadegiftsale.in">
+        <h1>Welcome to Handmade Gift Sale</h1>
+        <p>WP: +91 88674 99206</p>
     </div>
 
     <div class="carousel">
@@ -135,10 +136,21 @@
     <script>
         // Mock dynamic data fetching from a database
         const products = [
-            { id: 1, name: 'Product 1', price: 10, image: 'https://via.placeholder.com/150' },
-            { id: 2, name: 'Product 2', price: 25, image: 'https://via.placeholder.com/150' },
-            { id: 3, name: 'Product 3', price: 60, image: 'https://via.placeholder.com/150' },
-            { id: 4, name: 'Product 4', price: 15, image: 'https://via.placeholder.com/150' },
+            { id: 1, name:  'Beautiful Handmade Coconut Shell Ship Under Coconut Tree', price: 350, image: 'images/products/beautiful-handmade-coconut-shell-ship-under-coconut-tree.webp' },
+            { id: 2, name:  'Coconut Shell Pen Stand', price: 150, image: 'images/products/coconut-shell-pen-stand.webp' },
+            { id: 3, name:  'Cool Handmade Coconut Shell Ship Under Coconut Tree', price: 300, image: 'images/products/cool-handmade-coconut-shell-ship-under-coconut-tree.webp' },
+            { id: 4, name:  'Handcarved Wooden Craft', price: 200, image: 'images/products/Handcarved-wooden-craft.webp' },
+            { id: 5, name:  'Handmade Coconut Shell Boat Under Coconut Tree', price: 350, image: 'images/products/handmade-coconut-shell-boat-under-coconut-tree.webp' },
+            { id: 6, name:  'Handmade Coconut Shell Flow', price: 250, image: 'images/products/handmade-coconut-shell-flow.webp' },
+            { id: 7, name:  'Handmade Coconut Shell Ship Under Coconut Tree', price: 300, image: 'images/products/handmade-coconut-shell-ship-under-coconut-tree.webp' },
+            { id: 8, name:  'Handmade Hear Shape Plant Made With Coconut Shell', price: 150, image: 'images/products/Handmade-hear-shape-plant-made-with-coconut-shell.webp' },
+            { id: 9, name:  'Handmade Wooden House Under Tree', price: 250, image: 'images/products/handmade-wooden-house-under-tree.webp' },
+            { id: 10, name: 'Handmade Wooden Pen Stand', price: 300, image: 'images/products/handmade-wooden-pen-stand.webp' },
+            { id: 11, name: 'Handmade Wooden Sunflower Pare With Coconut Shell And Wood', price: 250, image: 'images/products/Handmade-wooden-sunflower-pare-with-coconut-shell-and-wood.webp' },
+            { id: 12, name: 'Handmade Wooden Sunflower With Coconut Shell And Wood', price: 300, image: 'images/products/Handmade-wooden-sunflower-with-coconut-shell-and-wood.webp' },
+            { id: 13, name: 'Nice Coconut Shell Ship Under Coconut Tree', price: 350, image: 'images/products/Nice-coconut-shell-ship-under-coconut-tree.webp' },
+			{ id: 14, name: 'Nice Handmade Coconut Shell Boat Under Coconut Tree', price: 350, image: 'images/products/Nice-handmade-coconut-shell-boat-under-coconut-tree.webp' },
+			{ id: 15, name: 'Simple Handmade Wooden Pen Stand', price: 200, image: 'images/products/simple-handmade-wooden-pen-stand.webp' },
         ];
 
         function loadProducts(filter = 'all') {
@@ -157,7 +169,7 @@
                 productDiv.innerHTML = `
                     <img src="${product.image}" alt="${product.name}">
                     <h3>${product.name}</h3>
-                    <p>$${product.price.toFixed(2)}</p>
+                    <p>₹${product.price.toFixed(2)}</p>
                     <button onclick="sendMessage('${product.name}', ${product.price})">Add to Cart</button>
                 `;
                 container.appendChild(productDiv);
